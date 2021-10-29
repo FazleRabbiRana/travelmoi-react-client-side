@@ -32,7 +32,7 @@ const Features = () => {
 				{
 					isLoading && <LoadingSpinner />
 				}
-				<div className="features grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-12 sm:gap-6 md:gap-10 lg:gap-4 xl:gap-8 2xl:gap-12">
+				<div className="features grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-12 sm:gap-6 md:gap-10 lg:gap-4 xl:gap-10 2xl:gap-14">
 					{
 						features.map(feature => <FeatureCard key={feature._id} feature={feature} />)
 					}
