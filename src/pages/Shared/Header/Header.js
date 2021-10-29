@@ -19,8 +19,8 @@ const Header = () => {
 	}
 
 	return (
-		<header className="main-header bg-white">
-			<div className="topbar bg-my-primary text-white">
+		<header className="main-header bg-white shadow-sm pt-7">
+			<div className="topbar bg-my-primary text-white shadow-sm fixed top-0 inset-x-0 w-full z-30">
 				<div className="container flex flex-nowrap justify-end items-center">
 					{!user.email ? (
 						<NavLink
@@ -53,7 +53,7 @@ const Header = () => {
 						</Link>
 					</div>
 					<div className={`main-menu-wrapper ${offCanvasOpen && '-translate-x-0'}`}>
-						<ul className="main-menu space-y-4 lg:space-y-0 lg:flex items-center justify-end">
+						<ul className="main-menu">
 							<li>
 								<NavLink
 									to="/home"
@@ -86,7 +86,7 @@ const Header = () => {
 				</div>
 				<button
 					onClick={handleOffCanvasToggle}
-					className="mobile-menu-toggler z-40"
+					className="mobile-menu-toggler"
 				>
 					{offCanvasOpen === false ? (
 						<HiMenuAlt1 className="mx-auto text-3xl md:text-4xl transform -rotate-180" />

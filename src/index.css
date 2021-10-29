@@ -7,9 +7,9 @@
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
   :root {
-    --clr-primary: hsl(195, 100%, 48%);
-    --clr-primary-light: hsl(195, 100%, 58%);
-    --clr-primary-dark: hsl(195, 100%, 42%);
+    --clr-primary: hsl(195, 99%, 48%);
+    --clr-primary-light: hsl(195, 99%, 58%);
+    --clr-primary-dark: hsl(195, 99%, 42%);
     --clr-secondary: hsl(83, 58%, 48%);
     --clr-secondary-light: hsl(83, 58%, 55%);
     --clr-secondary-dark: hsl(84, 70%, 42%);
@@ -18,12 +18,12 @@
   }
 
   body {
-    @apply bg-gray-100 font-my-primary overflow-x-hidden;
+    @apply bg-gray-100 text-gray-500 font-my-primary overflow-x-hidden;
     -webkit-tap-highlight-color: transparent;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+    @apply font-bold text-gray-700;
   }
  
   .logo {
@@ -31,7 +31,7 @@
   }
 
   .mobile-menu-toggler {
-    @apply lg:hidden inline-block cursor-pointer h-full w-14 md:w-16 shadow bg-my-secondary duration-300 hover:bg-my-secondary-dark text-white absolute top-0 right-0 z-40;
+    @apply lg:hidden inline-block cursor-pointer h-full w-14 md:w-16 shadow bg-my-secondary duration-300 hover:bg-my-secondary-dark text-white absolute top-0 right-0 z-20;
   }
 
   .btn-regular {
@@ -39,25 +39,29 @@
   }
 
   .btn-topbar {
-    @apply inline-block cursor-pointer text-center uppercase py-2 px-3 md:px-4 font-bold text-xs leading-none tracking-wide text-white bg-transparent duration-300 hover:bg-my-yellow;
+    @apply inline-block cursor-pointer text-center uppercase py-2 px-4 md:px-4 font-bold text-xs leading-none tracking-wide text-white bg-transparent duration-300 hover:bg-my-yellow;
   }
 
   .main-menu-wrapper {
-    @apply bg-my-yellow lg:bg-transparent text-white lg:text-gray-400 px-4 lg:p-0 h-screen lg:h-auto w-60 lg:w-auto fixed lg:static top-0 left-0 z-30 transform lg:transform-none duration-300 -translate-x-full;
+    @apply bg-my-yellow lg:bg-transparent text-white lg:text-gray-500 shadow-my-x lg:shadow-none px-4 py-8 lg:p-0 h-screen lg:h-auto w-60 lg:w-auto fixed lg:static top-0 left-0 z-40 transform lg:transform-none duration-300 -translate-x-full;
+  }
+
+  .main-menu {
+    @apply space-y-4 lg:space-y-0 lg:space-x-12 lg:flex items-center justify-end;
   }
 
   .nav-link {
-    @apply inline-block uppercase font-bold lg:font-normal lg:text-sm duration-300 transform hover:translate-x-4 lg:hover:translate-x-0;
+    @apply inline-block uppercase font-bold lg:text-my-md tracking-wider duration-150 transform hover:translate-x-4 lg:hover:translate-x-0 lg:hover:text-my-primary;
   }
   
 }
 
-/* code {
-  color: hsl(195, 100%, 48%);
-  color: hsl(195, 100%, 58%);
-  color: hsl(195, 100%, 42%);
+code {
+  color: hsl(195, 99%, 48%);
+  color: hsl(195, 99%, 58%);
+  color: hsl(195, 99%, 42%);
   background-color: hsl(83, 58%, 48%);
   background-color: hsl(83, 58%, 55%);
   background-color: hsl(84, 70%, 42%);
   color: hsl(42, 98%, 54%);
-} */
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { HiArrowNarrowUp } from 'react-icons/hi';
+import ScrollUpButton from "react-scroll-up-button";
 
 const Footer = () => {
 	const today = new Date();
@@ -15,9 +16,18 @@ const Footer = () => {
 						<p className="text-sm">
 							&copy; {fullYear} <span className="font-bold">Travelmoi</span>
 						</p>
-						<button className="flex-shrink-0 w-8 h-8 rounded-full text-center bg-white border-2 border-my-primary-light duration-300 hover:border-my-primary-dark">
+						<ScrollUpButton 
+							StopPosition={0}
+							ShowAtPosition={0}
+							EasingType='easeOutCubic'
+							AnimationDuration={500}
+							ContainerClassName='flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-center bg-white border-2 border-my-primary-light duration-300 hover:border-my-primary-dark'
+							TransitionClassName='ScrollUpButton__Toggled'
+							style={{}}
+							ToggledStyle={{}}
+						>
 							<HiArrowNarrowUp className="mx-auto" />
-						</button>
+						</ScrollUpButton>
 					</div>
 				</div>
 		</footer>

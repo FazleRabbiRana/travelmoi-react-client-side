@@ -29,6 +29,18 @@ module.exports = {
       letterSpacing: {
         'tiny': '1px',
       },
+      fontSize: {
+        'my-md': ['13px', {
+          lineHeight: '14px',
+        }],
+      },
+      boxShadow: {
+        'my-x': '0 4px 20px 0px rgba(0, 0, 0, 0.5)',
+      },
+      minHeight: {
+        'screen-55': '55vh',
+        'screen-70': '70vh',
+      },
 		},
   },
   variants: {
