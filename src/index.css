@@ -18,34 +18,38 @@
   }
 
   body {
-    @apply font-my-primary overflow-x-hidden;
+    @apply bg-gray-100 font-my-primary overflow-x-hidden;
     -webkit-tap-highlight-color: transparent;
   }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold;
   }
-
-  .btn-regular {
-    @apply inline-block cursor-pointer text-center uppercase py-2 px-4 font-bold text-xs leading-none text-white bg-my-secondary hover:bg-my-secondary-dark;
-  }
  
   .logo {
     @apply inline-block w-40 md:w-44;
   }
 
-  .login-popup-wrapper {
-    @apply fixed inset-0 bg-gray-800 bg-opacity-70 z-50 flex items-center opacity-0 invisible pointer-events-none;
+  .mobile-menu-toggler {
+    @apply lg:hidden inline-block cursor-pointer h-full w-14 md:w-16 shadow bg-my-secondary duration-300 hover:bg-my-secondary-dark text-white absolute top-0 right-0 z-40;
   }
-  .login-popup-wrapper-active {
-    @apply fixed inset-0 bg-gray-800 bg-opacity-70 z-50 flex items-center opacity-100 visible pointer-events-auto;
+
+  .btn-regular {
+    @apply inline-block cursor-pointer text-center uppercase py-2 px-4 font-bold text-xs leading-none text-white bg-my-secondary duration-300 hover:bg-my-secondary-dark;
   }
-  .login-popup-inner {
-    @apply relative text-center bg-white max-w-clear sm:max-w-md mx-auto pt-10 pb-8 px-4 md:px-8 rounded-lg transform duration-500 -translate-y-full;
+
+  .btn-topbar {
+    @apply inline-block cursor-pointer text-center uppercase py-2 px-3 md:px-4 font-bold text-xs leading-none tracking-wide text-white bg-transparent duration-300 hover:bg-my-yellow;
   }
-  .login-popup-inner-active {
-    @apply relative text-center bg-white max-w-clear sm:max-w-md mx-auto pt-10 pb-8 px-4 md:px-8 rounded-lg transform duration-500 translate-y-0;
+
+  .main-menu-wrapper {
+    @apply bg-my-yellow lg:bg-transparent text-white lg:text-gray-400 px-4 lg:p-0 h-screen lg:h-auto w-60 lg:w-auto fixed lg:static top-0 left-0 z-30 transform lg:transform-none duration-300 -translate-x-full;
   }
+
+  .nav-link {
+    @apply inline-block uppercase font-bold lg:font-normal lg:text-sm duration-300 transform hover:translate-x-4 lg:hover:translate-x-0;
+  }
+  
 }
 
 /* code {

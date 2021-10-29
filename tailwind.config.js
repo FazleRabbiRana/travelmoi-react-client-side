@@ -26,6 +26,9 @@ module.exports = {
       maxWidth: {
         'clear': 'calc(100% - 2rem)',
       },
+      letterSpacing: {
+        'tiny': '1px',
+      },
 		},
   },
   variants: {
