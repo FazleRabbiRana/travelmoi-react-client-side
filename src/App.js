@@ -4,11 +4,15 @@ import SimpleReactLightbox from 'simple-react-lightbox';
 import MyAuthProvider from './contexts/MyAuthProvider';
 import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login/Login';
-import ManageOrders from './pages/ManageOrders/ManageOrders';
 import MyOrders from './pages/MyOrders/MyOrders';
 import NotFound from './pages/NotFound/NotFound';
 import Footer from './pages/Shared/Footer/Footer';
 import Header from './pages/Shared/Header/Header';
+import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
+import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
+import AdminDashBoard from './pages/Admin/AdminDashboard/AdminDashBoard';
+import ManageOrders from './pages/Admin/ManageOrders/ManageOrders';
+import AddDestination from './pages/Admin/AddDestination/AddDestination';
 
 function App() {
   return (
@@ -27,11 +31,20 @@ function App() {
               <Route path='/login'>
                 <Login />
               </Route>
-              <Route path='/my-orders'>
+              <PrivateRoute exact path='/place-order/:itemId'>
+                <PlaceOrder />
+              </PrivateRoute>
+              <PrivateRoute exact path='/my-orders'>
                 <MyOrders />
-              </Route>
+              </PrivateRoute>
+              <PrivateRoute exact path='/admin-dashboard'>
+                <AdminDashBoard />
+              </PrivateRoute>
               <Route path='/manage-orders'>
                 <ManageOrders />
+              </Route>
+              <Route path='/add-destination'>
+                <AddDestination />
               </Route>
               <Route path='*'>
                 <NotFound />

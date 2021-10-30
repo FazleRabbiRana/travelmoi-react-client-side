@@ -6,12 +6,12 @@ import Features from '../Features/Features';
 
 const Home = () => {
 	return (
-		<section id="home">
+		<>
 			<Banner />
 			<Destinations />
 			<Facts />
 			<Features />
-		</section>
+		</>
 	);
 };
 

@@ -3,7 +3,7 @@ import React from 'react';
 const ManageOrders = () => {
 	return (
 		<div>
-			<h2>Manage Orders</h2>
+			<h2>Manage all Orders</h2>
 		</div>
 	);
 };

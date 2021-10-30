@@ -74,11 +74,29 @@ const Header = () => {
 							</li>
 							<li>
 								<NavLink
+									to="/add-destination"
+									activeStyle={navLinkActiveStyle}
+									className="nav-link"
+								>
+									Add Destination
+								</NavLink>
+							</li>
+							<li>
+								<NavLink
 									to="/manage-orders"
 									activeStyle={navLinkActiveStyle}
 									className="nav-link"
 								>
 									Manage Orders
+								</NavLink>
+							</li>
+							<li>
+								<NavLink
+									to="/admin-dashboard"
+									activeStyle={navLinkActiveStyle}
+									className="nav-link"
+								>
+									Admin
 								</NavLink>
 							</li>
 						</ul>

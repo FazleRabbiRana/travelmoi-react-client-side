@@ -51,7 +51,11 @@
   }
 
   .nav-link {
-    @apply inline-block uppercase font-bold lg:text-my-md tracking-wider duration-150 transform hover:translate-x-4 lg:hover:translate-x-0 lg:hover:text-my-primary;
+    @apply inline-block uppercase font-bold lg:text-my-sm tracking-wider duration-150 transform hover:translate-x-4 lg:hover:translate-x-0 lg:hover:text-my-primary;
+  }
+
+  input[readonly] {
+    @apply opacity-60 focus:outline-none;
   }
   
 }

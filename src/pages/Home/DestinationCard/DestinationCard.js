@@ -49,7 +49,7 @@ const DestinationCard = ({ destination }) => {
 					</div>
 				</div>
 				<div className="text-center mt-6">
-					<Link to={`/destinations/${_id}`} className="btn-regular">
+					<Link to={`/place-order/${_id}`} className="btn-regular">
 						Book Now
 					</Link>
 				</div>

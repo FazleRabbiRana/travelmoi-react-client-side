@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged  } from "firebase/auth";
 import initializeFirebase from "../firebase/firebase.init";
+import { useLocation } from "react-router-dom";
 
 initializeFirebase();
 
@@ -49,6 +50,12 @@ const useFirebase = () => {
 	const handleOffCanvasToggle = () => {
 		setOffCanvasOpen(!offCanvasOpen);
 	}
+
+	// close offCanvas on route change
+	const location = useLocation();
+	useEffect(() => {
+		setOffCanvasOpen(false);
+	}, [location]);
 
 	return {
 		signInUsingGoogle,

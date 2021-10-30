@@ -9,7 +9,9 @@ const FactCard = ({ fact }) => {
 			</div>
 			<div className="flex-auto p-4 lg:py-6 xl:p-8">
 				<h3 className="uppercase text-base font-normal">{title}</h3>
-				<p className="mt-2 mb-1 text-my-md xl:text-sm leading-relaxed md:leading-relaxed xl:leading-relaxed">{description}</p>
+				<p className="mt-2 mb-1 text-my-sm xl:text-sm leading-relaxed md:leading-relaxed xl:leading-relaxed">
+					{description}
+				</p>
 			</div>
 		</div>
 	);

@@ -31,8 +31,11 @@ module.exports = {
         'tiny': '1px',
       },
       fontSize: {
-        'my-md': ['13px', {
+        'my-sm': ['13px', {
           lineHeight: '14px',
+        }],
+        'my-xs': ['11px', {
+          lineHeight: '12px',
         }],
       },
       boxShadow: {
