@@ -14,7 +14,7 @@ const Banner = () => {
 			<div className="container text-center pb-8 text-white">
 				<h2 className="text-white lg:text-xl">Welcome to the world's best</h2>
 				<h1 className="mt-1 text-gray-800 text-2xl lg:text-4xl">
-					Creative Travel Agency 
+					Iconic Travel Agency 
 					<span className="block mt-2 lg:mt-3 text-white font-extrabold text-6xl">Travelmoi</span>
 				</h1>
 			</div>

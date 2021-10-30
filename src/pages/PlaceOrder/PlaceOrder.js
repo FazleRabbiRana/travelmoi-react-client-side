@@ -6,6 +6,7 @@ import { FaSearchPlus } from 'react-icons/fa';
 import { HiCheck } from 'react-icons/hi';
 import useMyAuthContexts from '../../hooks/useMyAuthContexts';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const PlaceOrder = () => {
 	const { itemId } = useParams();
@@ -19,7 +20,7 @@ const PlaceOrder = () => {
 		fetch(url)
 			.then(res => res.json())
 			.then(data => {
-				console.log(data);
+				// console.log(data);
 				setItem(data);
 			})
 			.catch(err => {
@@ -33,8 +34,10 @@ const PlaceOrder = () => {
 	const { register, handleSubmit, formState: { errors } } = useForm();
 	const onSubmit = data => {
 		// console.log(data);
-		const order = {...item};
-		data.order = order;
+		// const order = {...item};
+		const itemName = item?.title;
+		const itemId = item?._id;
+		data.orderedItem = {itemName, itemId};
 		data.status = 'Pending';
 
 		// post order to the server
@@ -200,6 +203,11 @@ const PlaceOrder = () => {
 						)}
 					</div>
 				</form>
+				{
+					orderSuccess && <div className="text-center mt-2">
+						<Link to='/home' className="text-sm underline text-my-primary hover:text-my-primary-dark">Back to Home</Link>
+					</div>
+				}
 			</section>
 		</div>
 	);
