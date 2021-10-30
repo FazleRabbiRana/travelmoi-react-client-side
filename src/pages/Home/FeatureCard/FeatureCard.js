@@ -6,7 +6,7 @@ const FeatureCard = ({ feature }) => {
 	return (
 		<div className="feature-card bg-white">
 			<div className="image bg-gray-300 h-40 overflow-hidden relative">
-				<div className="absolute inset-0 bg-my-secondary-dark opacity-30"></div>
+				<div className="absolute inset-0 bg-my-primary opacity-30"></div>
 				<img src={image} alt={title} className="h-full w-full object-cover" />
 			</div>
 			<div className="p-4 lg:px-5 lg:py-6">

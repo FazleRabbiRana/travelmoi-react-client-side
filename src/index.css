@@ -13,7 +13,7 @@
     --clr-secondary: hsl(83, 58%, 48%);
     --clr-secondary-light: hsl(83, 58%, 55%);
     --clr-secondary-dark: hsl(84, 70%, 42%);
-    --clr-yellow: hsl(42, 98%, 54%);
+    --clr-yellow: hsl(42, 98%, 48%);
     --font-primary: 'Lato', 'ui-sans-serif', 'sans-serif', 'system-ui';
   }
 
@@ -43,7 +43,7 @@
   }
 
   .main-menu-wrapper {
-    @apply bg-my-yellow lg:bg-transparent text-white lg:text-gray-500 shadow-my-x lg:shadow-none px-4 py-8 lg:p-0 h-screen lg:h-auto w-60 lg:w-auto fixed lg:static top-0 left-0 z-40 transform lg:transform-none duration-300 -translate-x-full;
+    @apply bg-my-yellow lg:bg-transparent text-white lg:text-gray-500 shadow-my-x lg:shadow-none px-4 py-8 lg:p-0 h-screen lg:h-auto w-60 lg:w-auto fixed lg:static top-0 left-0 z-40 lg:z-30 transform lg:transform-none duration-300 -translate-x-full;
   }
 
   .main-menu {

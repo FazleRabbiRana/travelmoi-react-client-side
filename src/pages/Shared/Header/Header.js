@@ -20,7 +20,7 @@ const Header = () => {
 
 	return (
 		<header className="main-header bg-white shadow-sm pt-7">
-			<div className="topbar bg-my-primary text-white shadow-sm fixed top-0 inset-x-0 w-full z-30">
+			<div className="topbar bg-my-primary text-white shadow-md fixed top-0 inset-x-0 w-full z-30 lg:z-40">
 				<div className="container flex flex-nowrap justify-end items-center">
 					{!user.email ? (
 						<NavLink

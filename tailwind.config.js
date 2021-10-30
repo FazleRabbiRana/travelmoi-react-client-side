@@ -25,6 +25,7 @@ module.exports = {
       },
       maxWidth: {
         'clear': 'calc(100% - 2rem)',
+        'half': '50%',
       },
       letterSpacing: {
         'tiny': '1px',
@@ -41,6 +42,9 @@ module.exports = {
         'screen-55': '55vh',
         'screen-70': '70vh',
       },
+      backgroundImage: {
+        'my-gradient-radial' : 'radial-gradient(circle, rgba(0,0,0,0.80), transparent, transparent)',
+      }
 		},
   },
   variants: {
