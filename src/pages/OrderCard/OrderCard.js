@@ -5,7 +5,6 @@ const OrderCard = ({ order, myOrders, setMyOrders }) => {
 	// console.log(order);
 	const { orderedItem } = order;
 	const [item, setItem] = useState({});
-	const [cancelSuccess, setCancelSuccess] = useState(false);
 
 	// load ordered item
 	useEffect(() => {
@@ -31,7 +30,6 @@ const OrderCard = ({ order, myOrders, setMyOrders }) => {
 				.then(res => {
 					console.log(res);
 					if (res.data.deletedCount) {
-						setCancelSuccess(true);
 						const remaining = myOrders.filter(order => order._id !== id);
 						setMyOrders(remaining);
 					}
@@ -69,11 +67,6 @@ const OrderCard = ({ order, myOrders, setMyOrders }) => {
 					>
 						Cancel
 					</button>
-					{cancelSuccess && (
-						<p className="text-center font-bold text-my-secondary-dark flex items-center justify-center">
-							Order placed successfully.
-						</p>
-					)}
 				</div>
 			</div>
 		</div>

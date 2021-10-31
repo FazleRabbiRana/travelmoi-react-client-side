@@ -15,7 +15,7 @@ const Login = () => {
 		setIsLoading(true);
 		signInUsingGoogle()
 			.then(result => {
-				console.log(result.user);
+				// console.log(result.user);
 				setUser(result.user);
 				history.push(redirect_uri);
 			})
@@ -30,8 +30,8 @@ const Login = () => {
 	return (
 		<section className="py-10 lg:py-12">
 			<div className="max-w-clear sm:max-w-sm md:max-w-md mx-auto bg-white text-center px-4 py-10 lg:py-12">
-				<h2 className="text-2xl">Login with</h2>
-				<div className="mt-10 mb-2">
+				<h2 className="text-2xl mb-10">Login with</h2>
+				<div className="mb-2">
 					{!user.email ? (
 						<button
 							onClick={handleGoogleSignIn}
@@ -45,7 +45,9 @@ const Login = () => {
 							</span>
 						</button>
 					) : (
-						<h4 className="text-xl text-green-600">Currently logged in !</h4>
+						<h4 className="text-xl text-green-600">
+							Currently logged in !
+						</h4>
 					)}
 				</div>
 			</div>

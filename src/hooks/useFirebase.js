@@ -7,6 +7,7 @@ initializeFirebase();
 
 const useFirebase = () => {
 	const [user, setUser] = useState({});
+	const [isAdminChecked, setIsAdminChecked] = useState(false);
 	const [isLoading, setIsLoading] = useState(true);
 	const [offCanvasOpen, setOffCanvasOpen] = useState(false);
 
@@ -46,6 +47,11 @@ const useFirebase = () => {
 			});
 	};
 
+	// toggle admin checked
+	// const toggleAdminChecked = () => {
+	// 	setIsAdminChecked(!isAdminChecked);
+	// }
+
 	// handle offCanvas toggle
 	const handleOffCanvasToggle = () => {
 		setOffCanvasOpen(!offCanvasOpen);
@@ -64,6 +70,9 @@ const useFirebase = () => {
 		user,
 		setIsLoading,
 		isLoading,
+		// toggleAdminChecked,
+		setIsAdminChecked,
+		isAdminChecked,
 		handleOffCanvasToggle,
 		setOffCanvasOpen,
 		offCanvasOpen,

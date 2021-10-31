@@ -43,6 +43,7 @@ module.exports = {
       },
       minHeight: {
         'screen-55': '55vh',
+        'screen-60': '60vh',
         'screen-70': '70vh',
       },
       backgroundImage: {
@@ -56,29 +57,5 @@ module.exports = {
       visibility: ['hover', 'focus', 'group-hover', 'group-focus'],
 		},
   },
-  plugins: [
-		// function ({ addComponents }) {
-    //   addComponents({
-    //     '.container': {
-    //       maxWidth: '100%',
-    //       paddingLeft: '1rem',
-    //       paddingRight: '1rem',
-    //       marginLeft: 'auto',
-    //       marginRight: 'auto',
-    //       '@screen sm': {
-    //         maxWidth: '720px',
-    //       },
-    //       '@screen md': {
-    //         maxWidth: '980px',
-    //       },
-    //       '@screen lg': {
-    //         maxWidth: '1200px',
-    //       },
-    //       '@screen xl': {
-    //         maxWidth: '1500px',
-    //       },
-    //     },
-    //   })
-    // }
-	],
+  plugins: [],
 }

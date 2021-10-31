@@ -204,8 +204,9 @@ const PlaceOrder = () => {
 					</div>
 				</form>
 				{
-					orderSuccess && <div className="text-center mt-2">
+					orderSuccess && <div className="text-center mt-2 space-x-6">
 						<Link to='/home' className="text-sm underline text-my-primary hover:text-my-primary-dark">Back to Home</Link>
+						<Link to='/my-orders' className="text-sm underline text-my-primary hover:text-my-primary-dark">My Orders</Link>
 					</div>
 				}
 			</section>
