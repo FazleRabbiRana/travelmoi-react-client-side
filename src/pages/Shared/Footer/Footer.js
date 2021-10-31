@@ -1,15 +1,35 @@
 import React from 'react';
 import { HiArrowNarrowUp } from 'react-icons/hi';
+import { NavLink } from 'react-router-dom';
 import ScrollUpButton from "react-scroll-up-button";
 
 const Footer = () => {
 	const today = new Date();
 	const fullYear = today.getFullYear();
 
+	const footerLinksActiveStyle = {
+		color: 'var(--clr-primary-dark)',
+	}
+
 	return (
 		<footer className="bg-white">
 			<div className="container py-8">
-				
+				<div>
+					<NavLink 
+						to='/terms-of-services' 
+						activeStyle={footerLinksActiveStyle}
+						className="footer-link"
+					>
+						Terms of Services
+					</NavLink>
+					<NavLink 
+						to='/privacy-policy' 
+						activeStyle={footerLinksActiveStyle}
+						className="footer-link"
+					>
+						Privacy Policy
+					</NavLink>
+				</div>
 			</div>
 			<div className="bg-gray-200 py-3">
 					<div className="container flex items-center justify-between">

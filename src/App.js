@@ -11,6 +11,8 @@ import Header from './pages/Shared/Header/Header';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import AdminDashBoard from './pages/Admin/AdminDashboard/AdminDashBoard';
+import TermsOfServices from './pages/Shared/TermsOfServices/TermsOfServices';
+import PrivacyPolicy from './pages/Shared/PrivacyPolicy/PrivacyPolicy';
 
 function App() {
   return (
@@ -38,6 +40,12 @@ function App() {
               <PrivateRoute exact path='/admin-dashboard'>
                 <AdminDashBoard />
               </PrivateRoute>
+              <Route path='/terms-of-services'>
+                <TermsOfServices />
+              </Route>
+              <Route path='/privacy-policy'>
+                <PrivacyPolicy />
+              </Route>
               <Route path='*'>
                 <NotFound />
               </Route>

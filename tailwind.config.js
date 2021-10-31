@@ -48,6 +48,9 @@ module.exports = {
       },
       backgroundImage: {
         'my-gradient-radial' : 'radial-gradient(circle, rgba(0,0,0,0.80), transparent, transparent)',
+      },
+      zIndex: {
+        'highest': '99999',
       }
 		},
   },

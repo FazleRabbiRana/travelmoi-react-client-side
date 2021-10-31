@@ -9,7 +9,7 @@
   :root {
     --clr-primary: hsl(195, 99%, 48%);
     --clr-primary-light: hsl(195, 99%, 58%);
-    --clr-primary-dark: hsl(195, 99%, 42%);
+    --clr-primary-dark: hsl(195, 99%, 41%);
     --clr-secondary: hsl(83, 58%, 48%);
     --clr-secondary-light: hsl(83, 58%, 55%);
     --clr-secondary-dark: hsl(84, 70%, 40%);
@@ -52,6 +52,10 @@
 
   .nav-link {
     @apply inline-block uppercase font-bold lg:text-my-sm tracking-wider duration-150 transform hover:translate-x-4 lg:hover:translate-x-0 lg:hover:text-my-primary;
+  }
+
+  .footer-link {
+    @apply inline-block text-xs uppercase hover:text-my-primary;
   }
 
   input[readonly] {
