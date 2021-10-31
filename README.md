@@ -26,7 +26,7 @@ This demo is about a travel agency.
 ### `data`
 
 Dynamic backend server on [Heroku](https://still-tor-10790.herokuapp.com/) is used to load the Data. \
-Here is the [services link](https://still-tor-10790.herokuapp.com/destinations) for this project \
+Here is the [features link](https://still-tor-10790.herokuapp.com/features) for this project \
 
 ### `icons`
 
