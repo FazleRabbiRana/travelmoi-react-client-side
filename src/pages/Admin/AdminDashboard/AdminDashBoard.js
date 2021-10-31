@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { HiCog, HiOutlinePlus } from 'react-icons/hi';
+import { HiCog, HiMinus, HiOutlinePlus } from 'react-icons/hi';
 import AddDestination from '../AddDestination/AddDestination';
 import ManageOrders from '../ManageOrders/ManageOrders';
+import RemoveDestination from '../RemoveDestination/RemoveDestination';
 
 const AdminDashBoard = () => {
 	const [control, setControl] = useState('manageAllOrders');
@@ -37,11 +38,21 @@ const AdminDashBoard = () => {
 								<span className={setActiveClass('addNewPackage')}>Add New Package</span>
 							</button>
 						</li>
+						<li>
+							<button 
+								onClick={() => setControl('removePackage')}
+								className="flex flex-nowrap items-center text-my-primary hover:text-my-primary-dark"
+							>
+								<HiMinus className="block mr-2" />
+								<span className={setActiveClass('removePackage')}>Remove Package</span>
+							</button>
+						</li>
 					</ul>
 				</div>
 				<div className="dashboard-content bg-white p-4 md:py-6 xl:p-6 2xl:p-8 lg:col-span-9 2xl:col-span-9">
 					{control === 'manageAllOrders' && <ManageOrders />}
 					{control === 'addNewPackage' && <AddDestination />}
+					{control === 'removePackage' && <RemoveDestination />}
 					{control === '' && <h2 className="text-xl uppercase mb-6">Dashboard Content</h2>}
 				</div>
 			</div>

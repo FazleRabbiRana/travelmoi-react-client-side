@@ -65,7 +65,7 @@ const ManageOrderCard = ({ order, setAllOrders, allOrders }) => {
 	return (
 		<div className="destination-card bg-gray-200 group">
 			<div className="image bg-gray-300 h-60 sm:h-52 overflow-hidden relative">
-				<img src={orderItemDetail.image} alt={orderItemDetail.title} className="h-full w-full object-cover" />
+				<img src={orderItemDetail?.image} alt={orderItemDetail?.title} className="h-full w-full object-cover" />
 			</div>
 			<div className="px-2 py-4 md:p-4">
 				<div className="flex flex-nowrap justify-between space-x-2">
