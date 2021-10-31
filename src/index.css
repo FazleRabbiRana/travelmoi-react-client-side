@@ -55,7 +55,7 @@
   }
 
   .footer-link {
-    @apply inline-block text-xs uppercase hover:text-my-primary;
+    @apply inline-block text-xs leading-none uppercase hover:text-my-primary;
   }
 
   input[readonly] {

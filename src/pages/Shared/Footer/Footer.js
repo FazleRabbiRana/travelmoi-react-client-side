@@ -2,6 +2,9 @@ import React from 'react';
 import { HiArrowNarrowUp } from 'react-icons/hi';
 import { NavLink } from 'react-router-dom';
 import ScrollUpButton from "react-scroll-up-button";
+import logo from '../../../logo.svg';
+import { FaPhoneAlt } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
 
 const Footer = () => {
 	const today = new Date();
@@ -14,23 +17,37 @@ const Footer = () => {
 	return (
 		<footer className="bg-white">
 			<div className="container py-8">
-				<div>
-					<NavLink 
-						to='/terms-of-services' 
-						activeStyle={footerLinksActiveStyle}
-						className="footer-link"
-					>
-						Terms of Services
-					</NavLink>
-					<NavLink 
-						to='/privacy-policy' 
-						activeStyle={footerLinksActiveStyle}
-						className="footer-link"
-					>
-						Privacy Policy
-					</NavLink>
+				<div className="space-y-6 sm:space-y-0 space-x-4 sm:flex sm:justify-between">
+					<div className="logo-wrapper text-center sm:text-left">
+						<img src={logo} alt="Travelmoi site logo" className="logo mb-4 sm:mb-0" />
+					</div>
+					<div className="space-y-3 text-sm leading-none">
+						<p className="flex flex-nowrap items-center">
+							<HiOutlineMail className="block mr-3" /> help@travelmoi.com
+						</p>
+						<p className="flex flex-nowrap items-center">
+							<FaPhoneAlt className="block mr-3" /> +880 1701 110011
+						</p>
+					</div>
+					<div className="flex flex-col space-y-3">
+						<NavLink 
+							to='/terms-of-services' 
+							activeStyle={footerLinksActiveStyle}
+							className="footer-link"
+						>
+							Terms of Services
+						</NavLink>
+						<NavLink 
+							to='/privacy-policy' 
+							activeStyle={footerLinksActiveStyle}
+							className="footer-link"
+						>
+							Privacy Policy
+						</NavLink>
+					</div>
 				</div>
 			</div>
+
 			<div className="bg-gray-200 py-3">
 					<div className="container flex items-center justify-between">
 						<p className="text-sm">
