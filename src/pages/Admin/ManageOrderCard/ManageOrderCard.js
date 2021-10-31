@@ -5,7 +5,6 @@ const ManageOrderCard = ({ order, setAllOrders, allOrders }) => {
 	// console.log(order);
 	const { _id, name, date, status, orderedItem } = order;
 	const [orderItemDetail, setOrderItemDetail] = useState({});
-	// const [isApproved, setIsApproved] = useState(false);
 
 	// load the order item detail
 	useEffect(() => {
@@ -13,7 +12,7 @@ const ManageOrderCard = ({ order, setAllOrders, allOrders }) => {
 		fetch(url)
 			.then(res => res.json())
 			.then(data => {
-				console.log(data);
+				// console.log(data);
 				setOrderItemDetail(data);
 			})
 	}, [orderedItem?.itemId]);
@@ -27,24 +26,23 @@ const ManageOrderCard = ({ order, setAllOrders, allOrders }) => {
 			.put(url, updatedOrder)
 			.then(res => {
 				if (res.data.modifiedCount) {
-					// const updatedOrders = {...allOrders};
-					// console.log(updatedOrders);
-					// setAllOrders(updatedOrders);
-					console.log('updated');
-					window.location.reload();
+					const reload = window.confirm('✔️ Approved. \nSelect "Ok" for updates by reloading.');
+					if (reload) {
+						window.location.reload();
+					}
 				}
 			})
 	}
 
 	// handle cancel order
 	const handleCancelOrder = id => {
+		const proceed = window.confirm('Order will be removed. \nProceed?');
 		const url = `https://still-tor-10790.herokuapp.com/orders/${id}`;
-		const proceed = window.confirm('Order will be Cancelled. Proceed?');
 		if (proceed) {
 			axios
 				.delete(url)
 				.then(res => {
-					console.log(res);
+					// console.log(res);
 					if (res.data.deletedCount) {
 						const remaining = allOrders.filter(order => order._id !== id);
 						setAllOrders(remaining);
@@ -80,30 +78,14 @@ const ManageOrderCard = ({ order, setAllOrders, allOrders }) => {
 					</div>
 				</div>
 				<div className="flex items-center justify-center text-center mt-4 space-x-2">
-					{/* {
-						status.toLowerCase() === 'approved' ? <p className="inline-block text-xs uppercase font-bold p-2 text-my-secondary-dark">
-							Approved
-						</p> : <button
-							onClick={() => handleApproveOrder(_id)}
-							className="btn-regular bg-my-secondary hover:bg-my-secondary-dark"
-						>
-							Approve
-						</button>
-					} */}
 					{
-						status.toLowerCase() !== 'approved' && <button
+						(status.toLowerCase() !== 'approved') && <button
 							onClick={() => handleApproveOrder(_id)}
 							className="btn-regular bg-my-secondary hover:bg-my-secondary-dark"
 						>
 							Approve
 						</button>
 					}
-					{/* <button
-						onClick={() => handleApproveOrder(_id)}
-						className="btn-regular bg-my-secondary hover:bg-my-secondary-dark"
-					>
-						Approve
-					</button> */}
 					<button
 						onClick={() => handleCancelOrder(_id)}
 						className="btn-regular bg-red-500 hover:bg-red-600"

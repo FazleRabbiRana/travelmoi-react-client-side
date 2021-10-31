@@ -26,7 +26,7 @@ const Header = () => {
 						<NavLink
 							to="/login"
 							activeStyle={topbarLinkActiveStyle}
-							className="btn-topbar"
+							className="btn-topbar -mr-4 sm:-mr-0"
 						>
 							Login
 						</NavLink>
@@ -63,33 +63,17 @@ const Header = () => {
 									Home
 								</NavLink>
 							</li>
-							<li>
-								<NavLink
-									to="/my-orders"
-									activeStyle={navLinkActiveStyle}
-									className="nav-link"
-								>
-									My Orders
-								</NavLink>
-							</li>
-							<li>
-								<NavLink
-									to="/add-destination"
-									activeStyle={navLinkActiveStyle}
-									className="nav-link"
-								>
-									Add Destination
-								</NavLink>
-							</li>
-							<li>
-								<NavLink
-									to="/manage-orders"
-									activeStyle={navLinkActiveStyle}
-									className="nav-link"
-								>
-									Manage Orders
-								</NavLink>
-							</li>
+							{
+								user.email && <li>
+									<NavLink
+										to="/my-orders"
+										activeStyle={navLinkActiveStyle}
+										className="nav-link"
+									>
+										My Orders
+									</NavLink>
+								</li>
+							}
 							<li>
 								<NavLink
 									to="/admin-dashboard"

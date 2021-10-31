@@ -12,7 +12,7 @@ const OrderCard = ({ order, myOrders, setMyOrders }) => {
 		fetch(url)
 			.then(res => res.json())
 			.then(data => {
-				console.log(data);
+				// console.log(data);
 				setItem(data);
 			})
 			.catch(err => {
@@ -40,7 +40,7 @@ const OrderCard = ({ order, myOrders, setMyOrders }) => {
 		}
 	};
 
-	const { title, image, address, cost } = item;
+	const { title, image, cost } = item;
 
 	return (
 		<div className="destination-card bg-gray-200 group">
@@ -51,7 +51,7 @@ const OrderCard = ({ order, myOrders, setMyOrders }) => {
 				<div className="flex flex-nowrap justify-between">
 					<div>
 						<h3 className="text-base">{title}</h3>
-						<p className="uppercase text-xs">{address?.country}</p>
+						<p className="uppercase text-xs">{order?.date}</p>
 					</div>
 					<div className="uppercase text-right">
 						<p className="text-xs leading-normal">From</p>
@@ -60,7 +60,7 @@ const OrderCard = ({ order, myOrders, setMyOrders }) => {
 						</h4>
 					</div>
 				</div>
-				<div className="text-center mt-6">
+				<div className="text-center mt-4">
 					<button
 						onClick={() => handleCancelOrder(order._id)}
 						className="btn-regular bg-my-yellow hover:bg-yellow-600"

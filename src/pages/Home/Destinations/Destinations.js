@@ -12,7 +12,7 @@ const Destinations = () => {
 		fetch('https://still-tor-10790.herokuapp.com/destinations')
 			.then(res => res.json())
 			.then(data => {
-				console.log(data);
+				// console.log(data);
 				setDestinations(data);
 			})
 			.catch(err => {

@@ -34,7 +34,6 @@ const PlaceOrder = () => {
 	const { register, handleSubmit, formState: { errors } } = useForm();
 	const onSubmit = data => {
 		// console.log(data);
-		// const order = {...item};
 		const itemName = item?.title;
 		const itemId = item?._id;
 		data.orderedItem = {itemName, itemId};

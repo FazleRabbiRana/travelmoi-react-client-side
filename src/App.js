@@ -11,8 +11,6 @@ import Header from './pages/Shared/Header/Header';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import AdminDashBoard from './pages/Admin/AdminDashboard/AdminDashBoard';
-import ManageOrders from './pages/Admin/ManageOrders/ManageOrders';
-import AddDestination from './pages/Admin/AddDestination/AddDestination';
 
 function App() {
   return (
@@ -40,12 +38,6 @@ function App() {
               <PrivateRoute exact path='/admin-dashboard'>
                 <AdminDashBoard />
               </PrivateRoute>
-              <Route path='/manage-orders'>
-                <ManageOrders />
-              </Route>
-              <Route path='/add-destination'>
-                <AddDestination />
-              </Route>
               <Route path='*'>
                 <NotFound />
               </Route>

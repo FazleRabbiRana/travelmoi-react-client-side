@@ -11,7 +11,7 @@ const MyOrders = () => {
 		fetch('https://still-tor-10790.herokuapp.com/orders')
 			.then(res => res.json())
 			.then(data => {
-				console.log(data);
+				// console.log(data);
 				const matchedOrders = data.filter(order => order.email === user.email);
 				setMyOrders(matchedOrders);
 			});
