@@ -12,7 +12,7 @@
     --clr-primary-dark: hsl(195, 99%, 42%);
     --clr-secondary: hsl(83, 58%, 48%);
     --clr-secondary-light: hsl(83, 58%, 55%);
-    --clr-secondary-dark: hsl(84, 70%, 42%);
+    --clr-secondary-dark: hsl(84, 70%, 40%);
     --clr-yellow: hsl(42, 98%, 48%);
     --font-primary: 'Lato', 'ui-sans-serif', 'sans-serif', 'system-ui';
   }
@@ -58,14 +58,4 @@
     @apply opacity-60 focus:outline-none;
   }
   
-}
-
-code {
-  color: hsl(195, 99%, 48%);
-  color: hsl(195, 99%, 58%);
-  color: hsl(195, 99%, 42%);
-  background-color: hsl(83, 58%, 48%);
-  background-color: hsl(83, 58%, 55%);
-  background-color: hsl(84, 70%, 42%);
-  color: hsl(42, 98%, 54%);
 }

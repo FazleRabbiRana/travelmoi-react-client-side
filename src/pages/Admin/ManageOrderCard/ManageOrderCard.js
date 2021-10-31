@@ -26,7 +26,7 @@ const ManageOrderCard = ({ order, setAllOrders, allOrders }) => {
 			.put(url, updatedOrder)
 			.then(res => {
 				if (res.data.modifiedCount) {
-					const reload = window.confirm('✔️ Approved. \nSelect "Ok" for updates by reloading.');
+					const reload = window.confirm('✔️ Approved successfully. \nSelect "Ok" to refresh this page.');
 					if (reload) {
 						window.location.reload();
 					}
