@@ -22,22 +22,24 @@ const OrderCard = ({ order, myOrders, setMyOrders }) => {
 
 	// handle cancel order
 	const handleCancelOrder = id => {
-		const url = `https://still-tor-10790.herokuapp.com/orders/${id}`;
-		const proceed = window.confirm('Are you sure to Cancel?');
-		if (proceed) {
-			axios
-				.delete(url)
-				.then(res => {
-					console.log(res);
-					if (res.data.deletedCount) {
-						const remaining = myOrders.filter(order => order._id !== id);
-						setMyOrders(remaining);
-					}
-				})
-				.catch(err => {
-					console.log(err);
-				});
-		}
+		alert('Not allowed!\nCurrently disabled for security purpose.');
+
+		// const url = `https://still-tor-10790.herokuapp.com/orders/${id}`;
+		// const proceed = window.confirm('Are you sure to Cancel?');
+		// if (proceed) {
+		// 	axios
+		// 		.delete(url)
+		// 		.then(res => {
+		// 			console.log(res);
+		// 			if (res.data.deletedCount) {
+		// 				const remaining = myOrders.filter(order => order._id !== id);
+		// 				setMyOrders(remaining);
+		// 			}
+		// 		})
+		// 		.catch(err => {
+		// 			console.log(err);
+		// 		});
+		// }
 	};
 
 	const { title, image, cost } = item;

@@ -36,6 +36,11 @@ const ManageOrderCard = ({ order, setAllOrders, allOrders }) => {
 
 	// handle cancel order
 	const handleCancelOrder = id => {
+		if (allOrders.length < 5) {
+			alert('For demo purpose can\'t remove when less then 5 orders');
+			return;
+		}
+
 		const proceed = window.confirm('Order will be removed. \nProceed?');
 		const url = `https://still-tor-10790.herokuapp.com/orders/${id}`;
 		if (proceed) {

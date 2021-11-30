@@ -6,23 +6,25 @@ const RemoveDestinationItem = ({ destination, destinations, setDestinations }) =
 	const { _id, title, image, address } = destination;
 
 	// handle remove package/destination
-	const handleremoveDestination = id => {
-		const proceed = window.confirm('Will be removed from Database. \nProceed?');
-		const url = `https://still-tor-10790.herokuapp.com/destinations/${id}`;
-		if (proceed) {
-			axios
-				.delete(url)
-				.then(res => {
-					console.log(res);
-					if (res.data.deletedCount) {
-						const remaining = destinations.filter(order => order._id !== id);
-						setDestinations(remaining);
-					}
-				})
-				.catch(err => {
-					console.log(err);
-				});
-		}
+	const handleRemoveDestination = id => {
+		alert('Not allowed!\nCurrently disabled for security purpose.');
+
+		// const proceed = window.confirm('Will be removed from Database. \nProceed?');
+		// const url = `https://still-tor-10790.herokuapp.com/destinations/${id}`;
+		// if (proceed) {
+		// 	axios
+		// 		.delete(url)
+		// 		.then(res => {
+		// 			console.log(res);
+		// 			if (res.data.deletedCount) {
+		// 				const remaining = destinations.filter(order => order._id !== id);
+		// 				setDestinations(remaining);
+		// 			}
+		// 		})
+		// 		.catch(err => {
+		// 			console.log(err);
+		// 		});
+		// }
 	};
 
 	return (
@@ -35,7 +37,7 @@ const RemoveDestinationItem = ({ destination, destinations, setDestinations }) =
 				<p className="hidden sm:inline-block ">{address.city}, {address.country}</p>
 			</div>
 			<div className="flex-shrink-0">
-				<button onClick={() => handleremoveDestination(_id)} className="p-2">
+				<button onClick={() => handleRemoveDestination(_id)} className="p-2">
 					<HiTrash className="text-xl text-red-600 hover:text-red-700" />
 				</button>
 			</div>

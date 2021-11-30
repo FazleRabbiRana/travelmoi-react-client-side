@@ -29,20 +29,21 @@ const AddDestination = () => {
 	const { register, handleSubmit, reset, formState: { errors } } = useForm({defaultValues});
 	const onSubmit = data => {
 		// console.log(data);
+		alert('Not allowed!\nCurrently disabled for security purpose.');
 		
 		// add new destination to the server
-		axios
-			.post('https://still-tor-10790.herokuapp.com/destinations', data)
-			.then(res => {
-				console.log(res);
-				if (res.data.insertedId) {
-					setAddSuccess(true);
-					reset();
-				}
-			})
-			.catch(err => {
-				console.log(err);
-			});
+		// axios
+		// 	.post('https://still-tor-10790.herokuapp.com/destinations', data)
+		// 	.then(res => {
+		// 		console.log(res);
+		// 		if (res.data.insertedId) {
+		// 			setAddSuccess(true);
+		// 			reset();
+		// 		}
+		// 	})
+		// 	.catch(err => {
+		// 		console.log(err);
+		// 	});
 	};
 
 	// required field default text
@@ -143,6 +144,7 @@ const AddDestination = () => {
 						)}
 					</div>
 				</form>
+				<p className="text-gray-400 mt-3">Currently disabled for security purpose.</p>
 
 				{addSuccess && (
 					<div className="text-center mt-2 space-x-6">
